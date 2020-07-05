@@ -1,0 +1,35 @@
+name: McStonks
+version: 1.0-SNAPSHOT
+main: com.mattarama.mcstonks.McStonks
+api-version: 1.13
+authors: [MattaRama]
+description: A stock trading plugin
+website: mattarama.com
+
+commands:
+  stocks:
+    description: Lists all available stocks and their prices
+    usage: /<command>
+    aliases: [stonks]
+  mystocks:
+    description: Lists all of a player's stocks
+    usage: /<command>
+    aliases: [mystonks]
+  stock:
+    description: Interacts with stocks
+    usage: /<command>
+    aliases: [stonk]
+
+  eco:
+    description: Controls player balances
+    usage: /<command>
+  pay:
+    description: Pay another player money from your own balance
+    usage: /<command>
+  balance:
+    description: Pay another player money from your own balance
+    usage: /<command>
+    aliases: [bal, money]
+  baltop:
+    description: Gives the balances of the highest players
+    usage: /<command>
