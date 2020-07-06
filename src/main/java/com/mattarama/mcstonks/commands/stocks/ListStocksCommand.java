@@ -1,4 +1,4 @@
-package com.mattarama.mcstonks.commands;
+package com.mattarama.mcstonks.commands.stocks;
 
 import com.mattarama.mcstonks.stocks.StockManager;
 import org.bukkit.command.Command;

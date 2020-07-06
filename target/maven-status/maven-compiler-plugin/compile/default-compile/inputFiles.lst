@@ -1,12 +1,28 @@
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\commands\eco\BalTopCommand.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\commands\StockCommand.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\stocks\StockManager.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\commands\eco\PayCommand.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\commands\MyStocksCommand.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\commands\eco\BalanceCommand.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\player\PlayerStockManager.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\player\MoneyManager.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\commands\ListStocksCommand.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\commands\eco\EcoCommand.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\McStonks.java
-C:\Users\matta\IdeaProjects\McStonks Plugin\src\main\java\com\mattarama\mcstonks\stocks\Stock.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Me_Stock_Quantity.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Me_Stock_Buy.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\CommandBase.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Me_Stock_Sell.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Stock_Get_Val.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\ApiServerThread.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Stock_Get_Name.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\commands\eco\EcoCommand.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\commands\stocks\ListStocksCommand.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\stocks\StockManager.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\commands\McStonksCommand.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\commands\eco\BalTopCommand.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\ApiServer.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Stock_List.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Stock_Get_Variability.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\McStonks.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Me_Eco_Pay.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Me_Eco_Bal.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\commands\Cmd$Me_Name.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\player\MoneyManager.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\commands\eco\PayCommand.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\commands\stocks\MyStocksCommand.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\commands\eco\BalanceCommand.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\stocks\Stock.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\ApiRequestManager.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\api\PlayerAPI.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\commands\stocks\StockCommand.java
+C:\Users\Matt\Documents\CadetProjects\McStonks-Plugin\src\main\java\com\mattarama\mcstonks\player\PlayerStockManager.java

@@ -49,7 +49,7 @@ public class Stock {
             value = 1;
 
         //Updates value in config
-        McStonks.me.getConfig().set("stocks." + stockId, value);
+        McStonks.me.getConfig().set("stocks." + stockId + ".value", value);
         McStonks.me.saveConfig();
 
     }

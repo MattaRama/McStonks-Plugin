@@ -33,3 +33,7 @@ commands:
   baltop:
     description: Gives the balances of the highest players
     usage: /<command>
+
+  mcstonks:
+    description: The root command for McStonks
+    usage: /<command>

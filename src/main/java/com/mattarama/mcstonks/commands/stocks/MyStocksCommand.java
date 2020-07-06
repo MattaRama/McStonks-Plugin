@@ -1,4 +1,4 @@
-package com.mattarama.mcstonks.commands;
+package com.mattarama.mcstonks.commands.stocks;
 
 import com.mattarama.mcstonks.McStonks;
 import com.mattarama.mcstonks.player.PlayerStockManager;

@@ -1,11 +1,14 @@
 package com.mattarama.mcstonks;
 
-import com.mattarama.mcstonks.commands.StockCommand;
+import com.mattarama.mcstonks.api.ApiRequestManager;
+import com.mattarama.mcstonks.api.ApiServer;
+import com.mattarama.mcstonks.commands.McStonksCommand;
+import com.mattarama.mcstonks.commands.stocks.StockCommand;
 import com.mattarama.mcstonks.commands.eco.BalTopCommand;
 import com.mattarama.mcstonks.commands.eco.BalanceCommand;
 import com.mattarama.mcstonks.commands.eco.EcoCommand;
-import com.mattarama.mcstonks.commands.ListStocksCommand;
-import com.mattarama.mcstonks.commands.MyStocksCommand;
+import com.mattarama.mcstonks.commands.stocks.ListStocksCommand;
+import com.mattarama.mcstonks.commands.stocks.MyStocksCommand;
 import com.mattarama.mcstonks.commands.eco.PayCommand;
 import com.mattarama.mcstonks.stocks.StockManager;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -21,6 +24,8 @@ public final class McStonks extends JavaPlugin {
 
     public static FileConfiguration playerConfig;
     public static File playerConfigFile;
+
+    static ApiServer api;
 
     @Override
     public void onEnable() {
@@ -38,6 +43,8 @@ public final class McStonks extends JavaPlugin {
         this.getCommand("baltop").setExecutor(new BalTopCommand());
         this.getCommand("balance").setExecutor(new BalanceCommand());
 
+        this.getCommand("mcstonks").setExecutor(new McStonksCommand());
+
         //Initializes Configs
         InitializeConfig();
 
@@ -46,6 +53,15 @@ public final class McStonks extends JavaPlugin {
 
         //Initializes Stock Updater
         StockManager.InitializeUpdater();
+
+        //Initializes API
+        ApiRequestManager.InitializeHashTable();
+        try {
+            api = new ApiServer(565);
+            api.Start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         getLogger().info("McStonks Initialized Successfully.");
 
@@ -59,9 +75,17 @@ public final class McStonks extends JavaPlugin {
         //Initializes main config
         saveConfig();
 
-        getConfig().addDefault("stocks.vac", 420);
-        getConfig().addDefault("stocks.mat", 69);
-        getConfig().addDefault("stocks.mwj", 10);
+        getConfig().addDefault("stocks.vac.value", 420);
+        getConfig().addDefault("stocks.vac.name", "Vacuum Corp");
+        getConfig().addDefault("stocks.vac.variability", 30);
+
+        getConfig().addDefault("stocks.mat.value", 69);
+        getConfig().addDefault("stocks.mat.name", "Matty Fatty Industries");
+        getConfig().addDefault("stocks.mat.variability", 10);
+
+        getConfig().addDefault("stocks.mwj.value", 10);
+        getConfig().addDefault("stocks.mwj.name", "Mexican Wall Jumpers Inc.");
+        getConfig().addDefault("stocks.mwj.variability", 3);
 
         saveDefaultConfig();
 
@@ -84,7 +108,17 @@ public final class McStonks extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        api.Interrupt();
+
+        try {
+            playerConfig.save(playerConfigFile);
+            saveConfig();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+
 
 
 }

@@ -1,6 +1,7 @@
 package com.mattarama.mcstonks.stocks;
 
 import com.mattarama.mcstonks.McStonks;
+import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +20,23 @@ public class StockManager {
      */
     public static void InitializeStocks() {
 
-        //Initializes stocks
-        stocksList.add(new Stock("Vacuum Corp", McStonks.me.getConfig().getInt("stocks.vac"), "vac", 30));
-        stocksList.add(new Stock("Matty Fatty Industries", McStonks.me.getConfig().getInt("stocks.mat"), "mat", 10));
-        stocksList.add(new Stock("Mexican Wall Jumpers Inc.", McStonks.me.getConfig().getInt("stocks.mwj"), "mwj", 4));
+        //Initializes stocks from config
+        ConfigurationSection stocksConfig = McStonks.me.getConfig().getConfigurationSection("stocks");
+
+        for (String s : stocksConfig.getKeys(false)) {
+
+            stocksList.add(new Stock(
+                    stocksConfig.getString(s + ".name"),
+                    stocksConfig.getInt(s + ".value"),
+                    s,
+                    stocksConfig.getInt(s + ".variability")
+            ));
+
+        }
+
+        //stocksList.add(new Stock("Vacuum Corp", McStonks.me.getConfig().getInt("stocks.vac"), "vac", 30));
+        //stocksList.add(new Stock("Matty Fatty Industries", McStonks.me.getConfig().getInt("stocks.mat"), "mat", 10));
+        //stocksList.add(new Stock("Mexican Wall Jumpers Inc.", McStonks.me.getConfig().getInt("stocks.mwj"), "mwj", 4));
 
     }
 
