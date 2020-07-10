@@ -1,6 +1,9 @@
 package com.mattarama.mcstonks.player;
 
 import com.mattarama.mcstonks.McStonks;
+import org.bukkit.Bukkit;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.ScoreboardManager;
 
 /**
  * Manages money transactions
@@ -15,7 +18,10 @@ public class MoneyManager {
      */
     public static int GetMoney(String username) {
 
-        return McStonks.playerConfig.getInt("players." + username + ".money");
+        int money = McStonks.playerConfig.getInt("players." + username + ".money");
+
+        Bukkit.dispatchCommand(Bukkit.getServer().getConsoleSender(), "scoreboard players set " + username + " money " + money);
+        return money;
 
     }
 
@@ -32,7 +38,7 @@ public class MoneyManager {
 
         McStonks.me.SavePlayerConfig();
 
-        return McStonks.playerConfig.getInt("players." + username + ".money");
+        return GetMoney(username);
 
     }
 
@@ -48,7 +54,10 @@ public class MoneyManager {
         int current = GetMoney(username);
         current += quantity;
         SetMoney(username, current);
-        return GetMoney(username);
+
+        int moneyFinal = GetMoney(username);
+
+        return moneyFinal;
 
     }
 

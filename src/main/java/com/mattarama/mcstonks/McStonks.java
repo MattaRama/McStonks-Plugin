@@ -11,6 +11,7 @@ import com.mattarama.mcstonks.commands.stocks.ListStocksCommand;
 import com.mattarama.mcstonks.commands.stocks.MyStocksCommand;
 import com.mattarama.mcstonks.commands.eco.PayCommand;
 import com.mattarama.mcstonks.stocks.StockManager;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -44,6 +45,10 @@ public final class McStonks extends JavaPlugin {
         this.getCommand("balance").setExecutor(new BalanceCommand());
 
         this.getCommand("mcstonks").setExecutor(new McStonksCommand());
+
+        //Initializes Scoreboard
+        Bukkit.dispatchCommand(Bukkit.getServer().getConsoleSender(),
+                "scoreboard objectives add money dummy {\"text\":\"Aussie Bucks\",\"color\":\"red\"}");
 
         //Initializes Configs
         InitializeConfig();

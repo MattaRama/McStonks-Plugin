@@ -89,7 +89,7 @@ public class ApiServerThread extends Thread {
         }
 
         //Checks if token is valid
-        if (PlayerAPI.TokenIsTaken(token)) {
+        if (!PlayerAPI.TokenIsTaken(token)) {
             dataOut.writeUTF("[002]");
             return false;
         }

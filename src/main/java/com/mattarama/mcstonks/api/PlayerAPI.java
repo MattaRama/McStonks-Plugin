@@ -57,7 +57,7 @@ public class PlayerAPI {
         //Checks if the token is taken
         for (String s : section.getKeys(false)) {
 
-            if (section.get(s + ".api.usertoken") == token) {
+            if (section.getString(s + ".api.usertoken").equals(token)) {
 
                 //Token is already in use
                 return true;
